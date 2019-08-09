@@ -1,0 +1,26 @@
+<Configuration>
+  <Name>Recall Routing Addon</Name>
+  <Author>Austin Smith, University of Maryland Libraries</Author>
+  <Version>1.0.2</Version>
+  <Active>true</Active>
+  <Type>Server</Type>
+  <Description>Recalls overdue (or nearly due) requests. For use by libraries that have deactivated ILLiad's built-in overdue functionality (e.g. due to NCIP implementation).</Description>
+  <Settings>
+    <Setting name="MaxLoanPeriod" value="" type="string">
+	     <Description>Only items with loan periods less than or equal to this number of days will be recalled.</Description>
+	  </Setting>
+    <Setting name="DaysRemaining" value="" type="string">
+	     <Description>Number of days, relative to due date, at which the request will be recalled. If negative, request will be recalled before the due date.</Description>
+	  </Setting>
+    <Setting name="RecallQueue" value="" type="string">
+      <Description>Queue to which non-renewable items will be routed.</Description>
+    </Setting>
+    <Setting name="RenewalQueue" value="" type="string">
+      <Description>Queue to which renewable items will be routed.</Description>
+    </Setting>
+  </Settings>
+  <Forms />
+  <Files>
+    <File>RecallRoutingAddon.lua</File>
+  </Files>
+</Configuration>
